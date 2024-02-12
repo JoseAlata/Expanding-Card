@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+}
+.img1 {
+    background-image: url(./img/HTML.jpg);
+}
+.img2 {
+    background-image: url(./img/CSS3.jpg);
+}
+.img3 {
+    background-image: url(./img/JS.jpg);
+}
+
+.img4 {
+    background-image: url(./img/React.webp);
+}
+
+.img5 {
+    background-image: url(./img/TS.png);
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    overflow: hidden;
+}
+.container {
+    display: flex;
+    width: 90vw;
+}
+
+.panel {
+    height: 80vh;
+    margin: 10px;
+
+    border-radius: 50px;
+
+    color: white;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    cursor: pointer;
+
+    flex: 0.5;
+
+    position: relative;
+
+    transition: all 700ms ease-in;
+}
+
+.panel h3 {
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+
+.panel.active {
+    flex: 5;
+}
+.panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100vw;
+    }
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5) {
+        display: none;
+    }
+}
